@@ -36,6 +36,53 @@
 <section>
     <h2>System Diagram</h2>
     <img src="images/flowchart.png" alt="">
+
+    <aside class="notes">
+        Here is a basic system diagram of Accipio Key. When the application starts users can login with a username and password. Having multiple accounts on a computer allows for tailored output for the specific user. Once the application starts several event dispatchers are initialized in order to gather user input, process it and dispatch the events to other components of the application. Some of the core events processed are word events, correction events, completion events and many more. The application listens for these events and distributes them to event handlers which output the event result to the screen. Let's now look at each individual feature individually.
+    </aside>
+
+</section>
+
+<section>
+    <h2>Corrections</h2>
+
+    <ul>
+        <li>cansas -> kansas</li>
+        <li>peopl -> people</li>
+    </ul>
+
+    <aside class="notes">
+        First let's look at corrections. They are very simple to understand. Accipio Key keeps track of what you have typed and what you are currently typing. When you are done typing a word Accipio Key checks if the word was misspelled. If the word was misspelled it deletes the misspelled word and inputs the correction to the screen.
+    </aside>
+
+</section>
+
+<section>
+    <h2>Completions</h2>
+
+    <ul>
+        <li>ca -> (cat, car, castle, camp)</li>
+        <li>ne -> (new, nest)</li>
+    </ul>
+
+    <aside class="notes">
+        Completions are slightly different from corrections. Completions process the word which you are currently typing and try to complete the it. This feature requires the press of a shortcut combination to complete the word. Completions will not occur automatically, unless the user specifies.
+    </aside>
+
+</section>
+
+<section>
+    <h2>Generation</h2>
+
+    <ul>
+        <li>lol -> laugh out loud</li>
+        <li>brb -> be right back</li>
+    </ul>
+
+    <aside class="notes">
+        Generations are similar to completions in that they take the current word you are typing as input. But they differ from completions because there is no guessing on what the user is trying to type. The user defines short form words like 'lol' and 'brb' and assign them text to be generated when they type in the short form word and a keyboard combination.
+    </aside>
+
 </section>
 
 <section>
@@ -44,21 +91,24 @@
 
     <ul>
         <li>Python 3</li>
-        <li>Kivy</li>
-        <li>TextBlob (nltk) </li>
+        <li>Kivy (GUI)</li>
+        <li>TextBlob</li>
         <li>Elasticsearch</li>
         <li>MongoDB</li>
     </ul>
 
-</section>
+    <aside class="notes">
+        Before we get to the demo. Let me outline the underlying technologies used in this project. Python 3 was used as the general purpose programming language. Kivy was used for the Graphical user interface. TextBlob and Elasticsearch where used for text processing. Finally MongoDB was used to store user related information.
+    </aside>
 
+</section>
 
 <section>
     <h2>Demo</h2>
 </section>
 
 <section>
-    <h2>Questions</h2>
+    <h2>Questions?</h2>
 </section>
 
 
